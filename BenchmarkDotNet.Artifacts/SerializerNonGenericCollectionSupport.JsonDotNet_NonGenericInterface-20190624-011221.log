@@ -1,0 +1,1682 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 48 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+Unable to find .sln file. Will use current directory D:\benchmarks\SerializerCollectionSupport to search for project file. If you don't use .sln file on purpose it should not be a problem.
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9
+// command took 1.54s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9
+// command took 2.53s and exited with 0
+// ***** Done, took 00:00:04 (4.28 sec)   *****
+// Found 48 benchmarks:
+//   JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=2]
+//   JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=50]
+//   JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=100]
+//   JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=100]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIEnumerable(ElementCount: 2)" --job "Default" --benchmarkId 0 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 210
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIList(ElementCount: 2)" --job "Default" --benchmarkId 1 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_1.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 854
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeICollection(ElementCount: 2)" --job "Default" --benchmarkId 2 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_2.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 1498
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIDictionary(ElementCount: 2)" --job "Default" --benchmarkId 3 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_3.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 2142
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIList_ToString(ElementCount: 2)" --job "Default" --benchmarkId 4 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_4.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 2786
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString(ElementCount: 2)" --job "Default" --benchmarkId 5 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_5.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 3430
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeICollection_ToString(ElementCount: 2)" --job "Default" --benchmarkId 6 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_6.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 4074
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString(ElementCount: 2)" --job "Default" --benchmarkId 7 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_7.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 4718
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper(ElementCount: 2)" --job "Default" --benchmarkId 8 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_8.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 5362
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIListWrapper(ElementCount: 2)" --job "Default" --benchmarkId 9 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_9.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 6006
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper(ElementCount: 2)" --job "Default" --benchmarkId 10 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_10.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 6650
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper(ElementCount: 2)" --job "Default" --benchmarkId 11 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_11.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 7294
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString(ElementCount: 2)" --job "Default" --benchmarkId 12 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_12.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 7938
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString(ElementCount: 2)" --job "Default" --benchmarkId 13 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_13.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 8582
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString(ElementCount: 2)" --job "Default" --benchmarkId 14 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_14.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 9226
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString(ElementCount: 2)" --job "Default" --benchmarkId 15 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_15.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 9870
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIEnumerable(ElementCount: 50)" --job "Default" --benchmarkId 16 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_16.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 10514
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIList(ElementCount: 50)" --job "Default" --benchmarkId 17 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_17.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 11158
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeICollection(ElementCount: 50)" --job "Default" --benchmarkId 18 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_18.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 11802
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIDictionary(ElementCount: 50)" --job "Default" --benchmarkId 19 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_19.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 12446
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIList_ToString(ElementCount: 50)" --job "Default" --benchmarkId 20 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_20.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 13090
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString(ElementCount: 50)" --job "Default" --benchmarkId 21 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_21.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 13734
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeICollection_ToString(ElementCount: 50)" --job "Default" --benchmarkId 22 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_22.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 14378
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString(ElementCount: 50)" --job "Default" --benchmarkId 23 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_23.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 15022
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper(ElementCount: 50)" --job "Default" --benchmarkId 24 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_24.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 15666
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIListWrapper(ElementCount: 50)" --job "Default" --benchmarkId 25 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_25.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 16310
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper(ElementCount: 50)" --job "Default" --benchmarkId 26 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_26.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 16954
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper(ElementCount: 50)" --job "Default" --benchmarkId 27 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_27.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 17598
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString(ElementCount: 50)" --job "Default" --benchmarkId 28 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_28.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 18242
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString(ElementCount: 50)" --job "Default" --benchmarkId 29 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_29.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 18886
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString(ElementCount: 50)" --job "Default" --benchmarkId 30 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_30.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 19530
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString(ElementCount: 50)" --job "Default" --benchmarkId 31 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_31.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 20174
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIEnumerable(ElementCount: 100)" --job "Default" --benchmarkId 32 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_32.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 20818
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIList(ElementCount: 100)" --job "Default" --benchmarkId 33 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_33.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 21462
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeICollection(ElementCount: 100)" --job "Default" --benchmarkId 34 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_34.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 22106
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIDictionary(ElementCount: 100)" --job "Default" --benchmarkId 35 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_35.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 22750
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIList_ToString(ElementCount: 100)" --job "Default" --benchmarkId 36 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_36.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 23394
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString(ElementCount: 100)" --job "Default" --benchmarkId 37 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_37.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 24038
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeICollection_ToString(ElementCount: 100)" --job "Default" --benchmarkId 38 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_38.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 24682
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString(ElementCount: 100)" --job "Default" --benchmarkId 39 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_39.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 25326
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper(ElementCount: 100)" --job "Default" --benchmarkId 40 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_40.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 25970
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIListWrapper(ElementCount: 100)" --job "Default" --benchmarkId 41 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_41.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 26614
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper(ElementCount: 100)" --job "Default" --benchmarkId 42 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_42.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 27258
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper(ElementCount: 100)" --job "Default" --benchmarkId 43 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_43.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 27902
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString(ElementCount: 100)" --job "Default" --benchmarkId 44 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_44.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 28546
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString(ElementCount: 100)" --job "Default" --benchmarkId 45 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_45.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 29190
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString(ElementCount: 100)" --job "Default" --benchmarkId 46 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_46.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 29834
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b9cf07a0-9f1c-4af7-b335-cc5621b554d9.dll" --benchmarkName "SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString(ElementCount: 100)" --job "Default" --benchmarkId 47 in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\bin\Release\netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface.Setup() in D:\benchmarks\SerializerCollectionSupport\NonGenericInterface.cs:line 176
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_47.Run(IHost host, String benchmarkName) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 30478
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in D:\benchmarks\SerializerCollectionSupport\bin\Release\netcoreapp3.0\b9cf07a0-9f1c-4af7-b335-cc5621b554d9\b9cf07a0-9f1c-4af7-b335-cc5621b554d9.notcs:line 95
+// AfterAll
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface-report.csv
+  BenchmarkDotNet.Artifacts\results\SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface-report-github.md
+  BenchmarkDotNet.Artifacts\results\SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface-report.html
+  BenchmarkDotNet.Artifacts\results\SerializerNonGenericCollectionSupport.JsonDotNet_NonGenericInterface-report-full.json
+
+// * Detailed results *
+JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=2]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=50]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=100]
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.18362
+Intel Core i7-7700 CPU 3.60GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=3.0.100-preview7-012291
+  [Host] : .NET Core 3.0.0-preview7-27806-02 (CoreCLR 4.700.19.30601, CoreFX 4.700.19.30601), 64bit RyuJIT
+
+
+|                               Method | ElementCount | Mean | Error |
+|------------------------------------- |------------- |-----:|------:|
+|               DeserializeIEnumerable |            2 |   NA |    NA |
+|                     DeserializeIList |            2 |   NA |    NA |
+|               DeserializeICollection |            2 |   NA |    NA |
+|               DeserializeIDictionary |            2 |   NA |    NA |
+|              SerializeIList_ToString |            2 |   NA |    NA |
+|        SerializeIEnumerable_ToString |            2 |   NA |    NA |
+|        SerializeICollection_ToString |            2 |   NA |    NA |
+|        SerializeIDictionary_ToString |            2 |   NA |    NA |
+|        DeserializeIEnumerableWrapper |            2 |   NA |    NA |
+|              DeserializeIListWrapper |            2 |   NA |    NA |
+|        DeserializeICollectionWrapper |            2 |   NA |    NA |
+|        DeserializeIDictionaryWrapper |            2 |   NA |    NA |
+|       SerializeIListWrapper_ToString |            2 |   NA |    NA |
+| SerializeIEnumerableWrapper_ToString |            2 |   NA |    NA |
+| SerializeICollectionWrapper_ToString |            2 |   NA |    NA |
+| SerializeIDictionaryWrapper_ToString |            2 |   NA |    NA |
+|               DeserializeIEnumerable |           50 |   NA |    NA |
+|                     DeserializeIList |           50 |   NA |    NA |
+|               DeserializeICollection |           50 |   NA |    NA |
+|               DeserializeIDictionary |           50 |   NA |    NA |
+|              SerializeIList_ToString |           50 |   NA |    NA |
+|        SerializeIEnumerable_ToString |           50 |   NA |    NA |
+|        SerializeICollection_ToString |           50 |   NA |    NA |
+|        SerializeIDictionary_ToString |           50 |   NA |    NA |
+|        DeserializeIEnumerableWrapper |           50 |   NA |    NA |
+|              DeserializeIListWrapper |           50 |   NA |    NA |
+|        DeserializeICollectionWrapper |           50 |   NA |    NA |
+|        DeserializeIDictionaryWrapper |           50 |   NA |    NA |
+|       SerializeIListWrapper_ToString |           50 |   NA |    NA |
+| SerializeIEnumerableWrapper_ToString |           50 |   NA |    NA |
+| SerializeICollectionWrapper_ToString |           50 |   NA |    NA |
+| SerializeIDictionaryWrapper_ToString |           50 |   NA |    NA |
+|               DeserializeIEnumerable |          100 |   NA |    NA |
+|                     DeserializeIList |          100 |   NA |    NA |
+|               DeserializeICollection |          100 |   NA |    NA |
+|               DeserializeIDictionary |          100 |   NA |    NA |
+|              SerializeIList_ToString |          100 |   NA |    NA |
+|        SerializeIEnumerable_ToString |          100 |   NA |    NA |
+|        SerializeICollection_ToString |          100 |   NA |    NA |
+|        SerializeIDictionary_ToString |          100 |   NA |    NA |
+|        DeserializeIEnumerableWrapper |          100 |   NA |    NA |
+|              DeserializeIListWrapper |          100 |   NA |    NA |
+|        DeserializeICollectionWrapper |          100 |   NA |    NA |
+|        DeserializeIDictionaryWrapper |          100 |   NA |    NA |
+|       SerializeIListWrapper_ToString |          100 |   NA |    NA |
+| SerializeIEnumerableWrapper_ToString |          100 |   NA |    NA |
+| SerializeICollectionWrapper_ToString |          100 |   NA |    NA |
+| SerializeIDictionaryWrapper_ToString |          100 |   NA |    NA |
+
+Benchmarks with issues:
+  JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=2]
+  JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=50]
+  JsonDotNet_NonGenericInterface.DeserializeIEnumerable: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeIList: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeICollection: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeIDictionary: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeIList_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeIEnumerable_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeICollection_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeIDictionary_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeIEnumerableWrapper: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeIListWrapper: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeICollectionWrapper: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.DeserializeIDictionaryWrapper: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeIListWrapper_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeIEnumerableWrapper_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeICollectionWrapper_ToString: DefaultJob [ElementCount=100]
+  JsonDotNet_NonGenericInterface.SerializeIDictionaryWrapper_ToString: DefaultJob [ElementCount=100]
+
+// * Legends *
+  ElementCount : Value of the 'ElementCount' parameter
+  Mean         : Arithmetic mean of all measurements
+  Error        : Half of 99.9% confidence interval
+  1 ns         : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:09 (9.74 sec), executed benchmarks: 48
+
+Global total time: 00:00:14 (14.02 sec), executed benchmarks: 48
+// * Artifacts cleanup *
